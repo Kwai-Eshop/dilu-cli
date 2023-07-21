@@ -1,0 +1,74 @@
+{
+  "name": "@ks-dilu/cli",
+  "version": "0.1.0-beta.2",
+  "description": "的卢微前端cli工具,支持初始化主子应用",
+  "main": "dist/index.js",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "package.json",
+    "template",
+    "hack.js"
+  ],
+  "bin": {
+    "dilu": "bin/cli"
+  },
+  "types": "dist/types/index.d.ts",
+  "scripts": {
+    "prepare": "ts-patch install -s",
+    "dev": "node debug.js",
+    "clean-build": "npx tsc --build --clean && rm -rf ./dist",
+    "compile": "npx tsc --build --verbose --pretty",
+    "build": "npm run clean-build && npm run compile"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^9.0.13",
+    "@types/inquirer": "^8.2.1",
+    "@types/lodash": "^4.14.182",
+    "@types/madge": "^5.0.0",
+    "@types/node": "^18.0.0",
+    "@types/yargs": "^17.0.10",
+    "eslint": "^8.18.0",
+    "ts-node": "^10.8.1",
+    "ts-patch": "^2.0.1",
+    "tsconfig-paths": "^4.0.0",
+    "typescript": "^4.7.4",
+    "typescript-transform-paths": "^3.3.1"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "cli-progress": "^3.11.2",
+    "cross-spawn": "7.0.3",
+    "debug": "^3.2.7",
+    "dependency-tree": "^8.1.2",
+    "download": "^8.0.0",
+    "ejs": "^3.1.8",
+    "fs-extra": "^10.1.0",
+    "globby": "^6.1.0",
+    "import-modules": "^3.1.0",
+    "inquirer": "^8.2.4",
+    "lodash": "^4.17.21",
+    "log-symbols": "^4.1.0",
+    "madge": "^5.0.1",
+    "mkdirp": "^1.0.4",
+    "ora": "^5.4.1",
+    "plugin-extend": "^0.1.7",
+    "semver": "^7.3.7",
+    "shelljs": "^0.8.5",
+    "vinyl-fs": "^3.0.3",
+    "vue-template-compiler": "2.6.11",
+    "yargs": "^17.5.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Kwai-Eshop/dilu-cli.git"
+  },
+  "keywords": [
+    "dilu"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  }
+}

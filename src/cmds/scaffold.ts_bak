@@ -1,0 +1,9 @@
+// import { CommandBuilder } from "yargs";
+// import { execTemplate } from "@/create";
+// export const command: string = "scaffold";
+// export const desc = "创建的卢应用的插件（脚手架）模板";
+// export const builder: CommandBuilder = {};
+// export const handler = async function (argv) {
+//   await execTemplate("@ks-dilu/cli-template-scaffold-template");
+//   return void 0;
+// };
