@@ -105,14 +105,14 @@ export const getNamespaceByFilePath = (
   // var scope = _.findLast(folders, function (folder) {
   //   return folder.indexOf("@") === 0;
   // });
-  var prefixReg = new RegExp(`(.*${prefix}-)`);
+  var prefixReg = new RegExp(`(.*${prefix.replace("/", ":")}-)`);
 
   // cleanup `ns` from unwanted parts and then normalize slashes to `:`
   ns = ns
-    .replace(prefixReg, "") // remove before `generator-`
     .replace(/[\/\\](index|main)$/, "") // remove `/index` or `/main`
     .replace(/^[\/\\]+/, "") // remove leading `/`
-    .replace(/[\/\\]+/g, ":"); // replace slashes by `:`
+    .replace(/[\/\\]+/g, ":") // replace slashes by `:`
+    .replace(prefixReg, ""); // remove before `generator-`
 
   // if (scope) {
   //   ns = scope + "/" + ns;
