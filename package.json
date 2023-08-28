@@ -1,6 +1,6 @@
 {
   "name": "@ks-dilu/cli",
-  "version": "0.1.0-beta.2",
+  "version": "0.1.0-beta.3",
   "description": "的卢微前端cli工具,支持初始化主子应用",
   "main": "dist/index.js",
   "files": [
